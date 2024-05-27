@@ -16,11 +16,18 @@
   <title>sky careers</title>
 </head>
 <body>
+  {% include 'nav.html' %}
+  <img class= "img-fluid" id="banner" src="/static/banner.jpg" alt="img">
   <div class="container">
     <h1 class="text-center mt-2 mb-4">{{company_name}} Careers</h1>
-    <img class= "img-fluid" id="banner" src="https://c64d7c4a-eddd-43f5-9341-4b2e05f06f8c-00-1nlqcy5znbui4.pike.replit.dev/static/banner.jpg" alt="img">
-    <h2 class="text-center mt-2 mb-4">About</h2>
-    <p class="lead">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitationem repellat quam porro reiciendis pariatur ipsum iste tempore hic fugit facilis labore illum odio minus consequuntur quas quisquam beatae, vero laboriosam optio quasi necessitatibus, molestiae quibusdam quos voluptatum! Voluptas, vel neque modi optio perferendis rerum commodi laboriosam, libero laborum exercitationem aliquid quidem quia ratione voluptate odit reprehenderit impedit cum hic eum sequi nulla eos. Nesciunt, enim iste!</p>
+    <div class="row" style="margin-bottom:23px;">
+      <div class="col-md-6">
+        <p class="lead">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitationem repellat quam porro reiciendis pariatur ipsum iste tempore hic fugit facilis labore illum odio minus consequuntur quas quisquam beatae, vero laboriosam optio quasi necessitatibus, molestiae quibusdam quos voluptatum! Voluptas, vel neque modi optio perferendis rerum commodi laboriosam, libero laborum exercitationem aliquid quidem quia ratione voluptate odit reprehenderit impedit cum hic eum sequi nulla eos. Nesciunt, enim iste!</p>
+      </div>
+      <div class="d-none d-md-block col-md-6">
+        <img src="/static/people_at_sky.jpg" alt="" style="height: 320px; border-radius: 4px;">
+      </div>
+    </div>
     <h2 class="text-center mt-2 mb-4">Open Positions</h2>  
     <p class="lead">
       {% for job in jobs %}
@@ -28,9 +35,10 @@
       {% endfor %}
     </p>
     <div class="text-center">
-      <button class="btn btn-primary btn-lg"">Contact Us</button>
+      <a href="mailto:sky@careers.com?subject=Question%20about%20job%20opening&body=MY%20Name%3A%20%3Cyour%20name%20here%3E%0D%0A%0D%0AMy%20Question%3A%20%3Center%20question%20here%3E%0D%0A" class="btn btn-primary btn-lg">Contact Us</a>
       <p class="mt-4">Copyright 2024, Sky Careers</p>
     </div>
   </div>
+  {% include 'footer.html' %}
 </body>
 </html>
